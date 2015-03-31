@@ -1,0 +1,24 @@
+{
+  "name": "gulp-seajs-wrap",
+  "version": "0.1.0",
+  "description": "",
+  "dependencies": {
+    "through2": "0.6.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elf-mouse/gulp-seajs-wrap.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "seajs-wrap"
+  ],
+  "author": "Elf-mousE <ifmouz@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elf-mouse/gulp-seajs-wrap/issues"
+  }
+}
