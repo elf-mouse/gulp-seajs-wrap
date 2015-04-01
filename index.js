@@ -1,12 +1,15 @@
 'use strict';
 
 var through = require('through2');
-var CMD_REG = /define\(.*function\s*\(\s*require\s*(.*)?\)\s*\{/; // from seajs-wrap
+var SEAJS_REG = /(sea|seajs)(-.*)?\.js/;
+var CMD_REG = /define\(.*function\s*\(\s*require\s*(.*)?\)\s*\{/;
+
+function isCMD(file) {
+  return SEAJS_REG.test(file.relative) || CMD_REG.test(new Buffer(String(file.contents)));
+}
 
 var addWrapPlugin = function() {
-
   var stream = through.obj(function(file, encoding, callback) {
-
     if (file.isNull()) {
       return callback(null, file);
     }
@@ -16,7 +19,7 @@ var addWrapPlugin = function() {
     }
 
     if (file.isBuffer()) {
-      if (!CMD_REG.test(new Buffer(String(file.contents)))) {
+      if (!isCMD(file)) {
         var output = 'define(function(require, exports, module) {\n' + String(file.contents) + '\n});';
         file.contents = new Buffer(output);
       }

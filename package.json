@@ -1,9 +1,9 @@
 {
   "name": "gulp-seajs-wrap",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.1",
+  "description": "add cmd wrap",
   "dependencies": {
-    "through2": "0.6.3"
+    "through2": "^0.6.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
     "gulpplugin",
     "seajs-wrap"
   ],
-  "author": "Elf-mousE <ifmouz@qq.com>",
+  "author": "Elf-mousE <ifmouz@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/elf-mouse/gulp-seajs-wrap/issues"
