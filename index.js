@@ -2,7 +2,7 @@
 
 var through = require('through2');
 var SEAJS_REG = /(sea|seajs)(-.*)?\.js/;
-var CMD_REG = /define\(.*function\s*\(\s*require\s*(.*)?\)\s*\{/;
+var CMD_REG = /seajs\.(config|use)|define|define\(.*function\s*\(\s*require\s*(.*)?\)\s*\{/;
 
 function isCMD(file) {
   return SEAJS_REG.test(file.relative) || CMD_REG.test(new Buffer(String(file.contents)));

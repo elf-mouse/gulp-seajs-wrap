@@ -1,6 +1,6 @@
 {
   "name": "gulp-seajs-wrap",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "add cmd wrap",
   "dependencies": {
     "through2": "^0.6.3"
